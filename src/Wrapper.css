@@ -1,0 +1,16 @@
+.Wrapper {
+  /* font-family: 'Roboto', sans-serif; */
+  font-size: .9rem;
+  display: grid;
+  /* width: 70%; */
+  /* border: 1px solid blue; */
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  /* margin: 0 auto; */
+}
+
+.Wrapper-sidebar {
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 2rem;
+}
