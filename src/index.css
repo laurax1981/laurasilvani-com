@@ -1,9 +1,27 @@
 @import 'normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+:root {
+  --serif-stack: 'Georgia', serif;
+  --sans-serif-stack: 'Montserrat', sans-serif;
+  --text-color: #4A4A4A;
+  --ref-color: #cccccc;
+  --link-color: rgb(255,20,147);
+  --header-bg-color: rgba(216,216,216,0.2);
+  --button-bg-color: #4A4A4A;
+  --button-hover-color: #000000;
+  --button-text-color: #FFF;
+}
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: var(--sans-serif-stack);
   font-size: 16px;
-  background: rgb(244, 247, 246);
+  line-height: calc(30/16);
+  color: #4A4A4A;
+  color: var(--text-color);
+  text-align: center;
+  /* background: rgb(244, 247, 246); */
   /* margin: 2rem; */
 }
 
@@ -12,28 +30,70 @@ ul {
   margin-top: 0;
   padding: 0;
   list-style: none;
-  background: white;
-}
-
-ul li {
-  display: inline;
+  /* background: white; */
 
 }
 
-h1 {
-  font-size: 1rem;
-  font-weight: 400;
+a {
+  color: rgb(255,20,147);
+  text-decoration: none;
 }
 
-h1 strong {
-  font-size: 1.5rem;
+.tooltip {
+  max-width: 300px;
 }
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Raleway', sans-serif;
+/* button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  font-family: 'Montserrat', sans-serif;
+  font-family: var(--sans-serif-stack);
+  font-weight: 600;
+  padding: .5em .8em;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--button-hover-color);
 } */
+
+/* Common button styles */
+button {
+	/* float: left; */
+	/* min-width: 150px;
+	max-width: 250px; */
+	display: block;
+	/* margin: 1em;
+	padding: 1em 2em; */
+	border: none;
+	background: none;
+	color: inherit;
+	/* vertical-align: middle; */
+	position: relative;
+	/* -webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale; */
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  font-family: 'Montserrat', sans-serif;
+  font-family: var(--sans-serif-stack);
+  font-weight: 600;
+  /* padding: .5em .8em; */
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}
+
+button > span {
+	/* display: block; */
+  /* vertical-align: middle; */
+  /* padding: 1em 2em; */
+}

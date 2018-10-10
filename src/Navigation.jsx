@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
 
+import './Navigation.css';
+import './Buttons.css';
+
+function NavItem(props) {
+  return (
+    <li>
+      {props.itemText}
+      {props.children}
+    </li>
+  )
+}
+
 class Navigation extends Component {
   render () {
     return (
-      <ul>
-        
-        <li><a href="">About</a></li>
-        <li><a href="">Work</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
+        <nav className="main-nav">
+          <ul>
+            <NavItem itemText="Resume"></NavItem>
+            <NavItem>
+              <button className="button--slide" data-text="Well done!"><span>Contact me</span></button>
+            </NavItem>
+          </ul>
+        </nav>
     )
   }
 }
